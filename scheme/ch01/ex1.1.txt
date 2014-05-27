@@ -24,4 +24,5 @@ Gambit v4.7.2
 6
 > (* (cond ((> a b) a) ((< a b) b) (else -1)) (+ a 1))
 16
-> 
+>
+> (exit)
