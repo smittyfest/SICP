@@ -15,5 +15,12 @@
 (define (sqrt-iter guess x) (new-if (good-enough? guess x) guess (sqrt-iter (improve guess x) x)))
 (define (sqrt x) (sqrt-iter 1.0 x))
 
+;;
+;; the if-expression is a special form in which the predicate is evaluated first,
+;; followed by either the consequent (if the predicate evaluated to true) or the
+;; alternative (if the predicate evaluated to false). The Scheme interpreter uses
+;; applicative-order evaluation, so that both arguments to a procedure will always
+;; be evaluated. This leads to infinite recursion since the else-clause is always evaluated.
+;;
 (sqrt 9)
 
