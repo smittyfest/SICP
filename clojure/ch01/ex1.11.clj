@@ -24,7 +24,9 @@
   (is (= 37 (fib3 7))))
 
 
-(defn fib3b [n]
+(defn fib3b
+  {:doc ""}
+  [n]
   (defn f [i a b c]
     (cond (< n 3) n
           (= i n) (+ a b c)
