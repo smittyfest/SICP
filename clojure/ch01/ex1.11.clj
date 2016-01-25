@@ -8,7 +8,9 @@
 ;;
 (ns sicp.ch01 (:use clojure.test))
 
-(defn fib3 [n]
+(defn fib3
+  {:doc ""}
+  [n]
   (if (< n 3) n (+ (fib3 (- n 1)) (fib3 (- n 2)) (fib3 (- n 3)))))
 
 (deftest test-fib3
