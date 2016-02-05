@@ -1,3 +1,3 @@
-For these exercises, Clojure 1.6.0 is being used:
+For these exercises, Clojure 1.7.0 is being used:
 
 http://clojure.org/
