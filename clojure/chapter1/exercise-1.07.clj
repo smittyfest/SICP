@@ -12,7 +12,6 @@
 ;; procedure that uses this kind of end test. Does this work better for small
 ;; and large numbers?
 ;;
-
 ;;
 ;; The procedure fails for small numbers because the tolerance is too coarse.
 ;;
@@ -31,7 +30,6 @@
 ;; to the next, and stops when the change is a very small fraction of guess.
 ;; This implementation is given in the following code:
 ;;
-
 ;;
 ;; Clojure has a range of "syntactic sugar" facilities which are not
 ;; available on more "standard" implementations of Lisp. Let's start by
