@@ -1,5 +1,3 @@
-(ns sicp.ch01 (:use clojure.test))
-
 ;;
 ;; Execise 1.6
 ;;
@@ -29,10 +27,9 @@
 ;;
 ;; What happens when Alyssa attempts to use this to compute square roots? Explain.
 ;;
+(ns sicp.ch01 (:use clojure.test))
 
-;;
 ;; Define the new "if" predicate as follows:
-;;
 (defn new-if
   {:doc "New 'if' predicate, *not* defined as a special form"}
   [predicate then-clause else-clause]
@@ -68,7 +65,7 @@
   (average guess (/ x guess)))
 
 ;;
-;; INSERT NEW "IF" PREDICATE HERE
+;; insert new 'if' predicate here:
 ;;
 (defn sqrt-iter
   {:doc "Recursive procedure used to generate approximations to square root x"}
@@ -81,7 +78,6 @@
   {:doc "Wrapper function, used to invoke the square root procedure"}
   (sqrt-iter 1.0 x))
 
-;;
 ;; Attempting to run this code through the Scheme interpreter, which
 ;; uses applicative-order evaluation, will result in an infinite
 ;; recursion. Because new-if is a procedure, rather than a special form,
@@ -106,7 +102,6 @@
 ;; It's easy to see that this process results in an infinite recursion, hanging
 ;; the interpreter.
 ;;
-
 ;;
 ;; This code will hang the interpreter:
 ;;
