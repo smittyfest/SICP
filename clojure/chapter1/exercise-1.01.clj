@@ -1,4 +1,4 @@
-Clojure 1.6.0
+Clojure 1.7.0
 user=> 10
 10
 user=> (+ 5 3 4)
@@ -25,4 +25,4 @@ user=> (+ 2 (if (> b a) b a))
 6
 user=> (* (cond (> a b) a (< a b) b :else -1) (+ a 1))
 16
-user=> ^D
+user=> Bye for now!
