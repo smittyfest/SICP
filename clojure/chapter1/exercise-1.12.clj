@@ -38,7 +38,7 @@
                (pascal (- row 1) col))))
 
 ;;
-;; Run some simple unit tests.
+;; unit tests.
 ;;
 (= (pascal 1 1) 1)
 (= (pascal 2 1) 1)
