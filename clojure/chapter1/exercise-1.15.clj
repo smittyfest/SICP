@@ -11,3 +11,5 @@
 
 (defn p
   [x]
+  (reset! num-iterations (+ @num-iterations 1))
+  (- (* 3 x)(* 4 (cube x))))
