@@ -1,4 +1,6 @@
 ;;
+;; Exercise 1.13
+;;
 ;; Proof via Bill the Lizard
 ;;
 From SICP section 1.2.2 Tree Recursion
