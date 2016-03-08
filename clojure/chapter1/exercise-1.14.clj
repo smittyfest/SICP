@@ -1,3 +1,6 @@
+;;
+;; Exercise 1.14
+;;
 (ns sicp.ch01 (:use clojure.test))
 
 (defn count-change
