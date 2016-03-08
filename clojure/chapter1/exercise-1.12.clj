@@ -14,7 +14,6 @@
 ;; a procedure that computes elements of Pascal's triangle by means
 ;; of a recursive procedure.
 ;;
-
 ;;
 ;; We will structure the procedure to take the "row" and "col" of the
 ;; entry in Pascal's triangle that we wish to compute. The procedure will
