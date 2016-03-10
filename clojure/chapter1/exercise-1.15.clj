@@ -16,3 +16,10 @@
   [angle]
   (if (< (Math/abs angle) 0.1) angle
     (p (sine (/ angle 3)))))
+
+(sine 12.15)
+
+(deftest test-sine-num-iterations
+  (is (= 5 @num-iterations)))
+
+(run-tests)
