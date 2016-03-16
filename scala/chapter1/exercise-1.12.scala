@@ -37,3 +37,4 @@ def pascal(col: Int, row: Int): Int = {
   else if (col == 0 || col == row) 1
   else pascal(col-1,row-1) + pascal(col,row-1)
 }
+// unit-tests
