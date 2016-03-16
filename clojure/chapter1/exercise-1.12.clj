@@ -31,6 +31,7 @@
 ;; to cells "outside" the triangle, will lead to unpredictable results.
 ;;
 (defn pascal
+  {:doc "Computes Pascal's Triangle"}
   [row col]
   (cond 
     (= col 1) 1
