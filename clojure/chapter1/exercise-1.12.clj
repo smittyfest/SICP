@@ -30,13 +30,14 @@
 ;; error checking. Entering "negative" values, or values cooresponding
 ;; to cells "outside" the triangle, will lead to unpredictable results.
 ;;
-(defn pascal [row col]
-  (cond (= col 1) 1
-        (= col row) 1
-        :else (+
-               (pascal (- row 1) (- col 1))
-               (pascal (- row 1) col))))
-
+(defn pascal
+  [row col]
+  (cond 
+    (= col 1) 1
+    (= col row) 1
+    :else (+
+      (pascal (- row 1) (- col 1))
+      (pascal (- row 1) col))))
 ;;
 ;; unit tests.
 ;;
