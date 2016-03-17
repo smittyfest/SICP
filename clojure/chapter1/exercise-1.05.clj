@@ -4,8 +4,8 @@
 
 (defn overflow-test
   [x y]
-    (if (zero? x) 0
-      y))
+  (if (zero? x) 0
+    y))
 
 ;; On a standard Scheme interpreter, which uses applicative-order evaluation,
 ;; this will result in an infinite recursion, hanging the interpreter.
