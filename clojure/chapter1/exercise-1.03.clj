@@ -5,17 +5,20 @@
 
 (defn f 
   {:doc "Take three arguments, and return the sum of the squares of the two largest"}
-  [a b c] (def smallest (min a b c))
-  (cond (= a smallest) (sum-of-squares b c)
-        (= b smallest) (sum-of-squares a c)
-        (= c smallest) (sum-of-squares a b) :else -1))
-
+  [a b c]
+  (def smallest (min a b c))
+    (cond
+      (= a smallest) (sum-of-squares b c)
+      (= b smallest) (sum-of-squares a c)
+      (= c smallest) (sum-of-squares a b)
+      :else -1))
 
 ;; alternative implementation
-(defn ff [a b c] (if (> a b)
-  (+ (* a a) (if (> b c) (* b b) (* c c)))
-  (+ (* b b) (if (> a c) (* a a) (* c c)))))
-
+(defn ff
+  [a b c]
+  (if (> a b)
+    (+ (* a a) (if (> b c) (* b b) (* c c)))
+    (+ (* b b) (if (> a c) (* a a) (* c c)))))
 
 (deftest test-f
   (is (= 2 (f 1 1 1)))
