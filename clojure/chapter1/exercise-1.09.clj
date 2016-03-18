@@ -28,14 +28,19 @@
 
 (defn inc
   {:doc "Returns a number one greater than the argument n."}
-  [n] (- n -1))
+  [n]
+  (- n -1))
 
 (defn dec
   {:doc "Returns a number one less than the argument n."}
-  [n] (- n 1))
+  [n]
+  (- n 1))
 
 ;; First procedure:
-(defn + [a b] (if (= a 0) b (inc (+ (dec a) b))))
+(defn +
+  [a b]
+  (if (= a 0) b
+    (inc (+ (dec a) b))))
 
 ;; Evaluation using the substitution model:
 (+ 4 5)
@@ -55,7 +60,10 @@
 ;; This is a recursive process.
 
 ;; Second procedure:
-(defn + [a b] (if (= a 0) b (+ (dec a) (inc b))))
+(defn +
+  [a b]
+  (if (= a 0) b
+    (+ (dec a) (inc b))))
 
 ;; Evaluation using the substitution model:
 (+ 4 5)
