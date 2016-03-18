@@ -33,8 +33,9 @@
 (defn new-if
   {:doc "New 'if' predicate, *not* defined as a special form"}
   [predicate then-clause else-clause]
-  (cond predicate then-clause
-        :else else-clause))
+  (cond
+    predicate then-clause
+    :else else-clause))
 
 (new-if (= 2 3) 0 5)
 ;; => 5
@@ -47,7 +48,8 @@
 ;;
 (defn square
   {:doc "Return the square of the argument"}
-  [n] (* n n))
+  [n]
+  (* n n))
 
 (defn good-enough?
   {:doc "Is the square of guess close enough to x?"}
@@ -70,23 +72,23 @@
 (defn sqrt-iter
   {:doc "Recursive procedure used to generate approximations to square root x"}
   [guess x]
-  (new-if (good-enough? guess x)
-          guess
-          (sqrt-iter (improve guess x) x)))
+  (new-if (good-enough? guess x) guess
+    (sqrt-iter (improve guess x) x)))
 
-(defn sqrt [x]
+(defn sqrt
   {:doc "Wrapper function, used to invoke the square root procedure"}
+  [x]
   (sqrt-iter 1.0 x))
 
-;; Attempting to run this code through the Scheme interpreter, which
-;; uses applicative-order evaluation, will result in an infinite
+;; Attempting to run this code through the Clojure compiler, which
+;; uses applicative-order evaluation, will result in infinite
 ;; recursion. Because new-if is a procedure, rather than a special form,
-;; the interpreter will attempt to evaluate the procedure and its
+;; the compiler will attempt to evaluate the procedure and its
 ;; operands, before applying the procedure to the operands.
-;; In this case, the way in which sqrt-iter is recursively defined, will
-;; cause the interpreter to go into an infinite recursion.
+;; In this case, the way in which sqrt-iter is recursively defined will
+;; cause the interpreter to go into infinite recursion.
 ;;
-;; Roughly speaking, the evaluation proceeds as follows:
+;; The evaluation proceeds as follows:
 ;;
 ;; (sqrt-iter 1.0 2.0)
 ;; (new-if (good-enough? 1.0 2.0) 1.0 (sqrt-iter (improve 1.0 2.0) 2.0))
@@ -99,10 +101,7 @@
 ;; (sqrt-iter (improve 1.0 2.0) 2.0)
 ;; (new-if (good-enough? (improve 1.0 2.0) 2.0) (improve 1.0 2.0) (sqrt-iter (improve (improve 1.0 2.0) 2.0) 2.0))
 ;;
-;; It's easy to see that this process results in an infinite recursion, hanging
-;; the interpreter.
-;;
+;; This process results in infinite recursion, hanging the interpreter.
 ;;
 ;; This code will hang the interpreter:
-;;
 (sqrt-iter 1.0 2.0)
