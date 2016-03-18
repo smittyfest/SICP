@@ -11,16 +11,22 @@
 (defn fib3
   {:doc ""}
   [n]
-  (if (< n 3) n (+ (fib3 (- n 1)) (fib3 (- n 2)) (fib3 (- n 3)))))
+  (if (< n 3) n
+    (+ 
+      (fib3 (- n 1))
+      (fib3 (- n 2))
+      (fib3 (- n 3)))))
 
 (defn fib3b
   {:doc ""}
   [n]
-  (defn f [i a b c]
-    (cond (< n 3) n
-          (= i n) (+ a b c)
-          :else (f (+ i 1) b c (+ a b c))))
-  (f 3 0 1 2))
+  (defn f
+    [i a b c]
+    (cond
+      (< n 3) n
+      (= i n) (+ a b c)
+      :else (f (+ i 1) b c (+ a b c))))
+    (f 3 0 1 2))
 
 (deftest test-fib3
   (is (=  0 (fib3 0)))
