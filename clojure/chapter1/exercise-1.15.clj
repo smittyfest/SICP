@@ -3,7 +3,9 @@
 ;;
 (ns sicp.ch01 (:use clojure.test))
 
-(defn cube [x] (* x x x))
+(defn cube
+  [x]
+  (* x x x))
 
 (def num-iterations (atom 0))
 
