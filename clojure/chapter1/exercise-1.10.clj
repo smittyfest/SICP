@@ -1,7 +1,7 @@
 ;;
 ;; Exercise 1.10
 ;;
-;; The following procedure computs a mathematical function called Ackerman's function:
+;; The following procedure computs a mathematical function called Ackermann's function:
 ;;
 ;; (define (A x y)
 ;;  (cond ((= y 0) 0)
@@ -33,10 +33,10 @@
 ;;
 
 ;;
-;; Ackerman function
+;; Ackermann's function
 ;;
 (defn A
-  {:doc "Ackerman function in two variables"}
+  {:doc "Ackermann's function in two variables"}
   [x y]
   (cond 
     (= y 0) 0
@@ -53,11 +53,17 @@
 (A 3 3)
 ;; => 65536
 
-(defn f [n] (A 0 n))
+(defn f
+  [n]
+  (A 0 n))
 
-(defn g [n] (A 1 n))
+(defn g
+  [n]
+  (A 1 n))
 
-(defn h [n] (A 2 n))
+(defn h
+  [n]
+  (A 2 n))
 
 ;;
 ;; Examples of f
