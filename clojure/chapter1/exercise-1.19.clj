@@ -8,4 +8,7 @@
 ;; the pair Fib(n+1) and Fib(n).
 ;; In other words, the Fibonacci numbers are produced by applying T^n, the nth power of the
 ;; transformation T, starting with the pair (1,0). Now consider T to be the special case of p = 0 and
-;; q = 1 in a family of transformations Tpq, where Tpq transforms the pair (a, b)
+;; q = 1 in a family of transformations Tpq, where Tpq transforms the pair (a, b) according to
+;; (a <- bq + aq + ap) and (b <- bp + aq). Show that if we apply such a transformation Tpq twice,
+;; the effect is the same as using a single transformation Tp'q' of the same form, and compute p' and q'
+;; in terms of p and q.
