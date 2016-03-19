@@ -9,7 +9,7 @@
 
 (defn dv
   [a b]
-  (Math/floor (/ a b))
+  (Math/floor (/ a b)))
   
 (defn mult
   [a b]
@@ -17,9 +17,9 @@
     [a b cnt accu]
     (cond
       (zero? a) accu
-      (= (rem a 2) 1) ;; finish case
-      :else ;; finish case
-    (mult2 a b 0 0))))
+      (= (rem a 2) 1) (mult2 (dv a 2) b (+ accu (* (Math/pow 2 cnt) b)) (+ cnt 1))
+      :else (mult2 (dv a 2) b accu (+ cnt 1)))
+    (mult2 a b 0 0)))
 
 (deftest test-mult
   (is (=  0 (mult 2 0)))
@@ -30,5 +30,6 @@
   (is (= 10 (mult 2 5)))
   (is (= 12 (mult 2 6)))
   (is (= 14 (mult 2 7))))
+  (is (= 1560 (mult 120 13)))
 
 (run-tests)
