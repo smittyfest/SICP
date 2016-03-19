@@ -5,3 +5,4 @@
 ;; an iterative process for multiplying two integers in terms of adding, doubling,
 ;; and halving and uses a logarithmic number of steps.
 ;;
+(ns sicp.ch01 (:use clojure.test))
