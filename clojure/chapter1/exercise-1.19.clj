@@ -34,4 +34,35 @@
 ;;                         q
 ;;                         (- count 1)))))
 ;;
+
+;; ----------------------------------
+;;
+;; When transformation is applied two times and equations formed to be
+;; the same for 1st and 2nd application it gets obvious that 
+;;
+;; p' = p^2 + q^2
+;; q' = 2pq + q^
+;;
+;; @see http://www.kendyck.com/archives/2005/05/13/solution-to-sicp-exercise-119/
+;;
+;; when replaced the solution is following.
+;;
 (ns sicp.ch01 (:use clojure.test))
+
+(defn fib
+  [n]
+  (defn fib-iter
+    [a b p q cnt]
+    (cond
+      (zero? cnt) b
+      (even? cnt) (fib-iter
+                    a
+                    b 
+                    (+ (square p) (square q))
+                    (+ (square q) (* 2 p q)) (dv cnt 2))
+      :else (fib-iter 
+              (+ (* b q) (* a q) (* a p)) 
+              (+ (* b p) (* a q)) p q (dec cnt))))
+  (fib-iter 1 0 0 1 n))
+
+;; unit-tests
