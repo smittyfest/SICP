@@ -35,3 +35,5 @@ res8: Int = 16
 scala> 2 + (if (b > a) b else a)
 res9: Int = 6
 
+scala> (if (a > b) a else if (a < b) b else -1) * (a + 1)
+res10: Int = 16
