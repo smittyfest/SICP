@@ -25,3 +25,9 @@ res6: Int = 19
 
 scala> a == b
 res7: Boolean = false
+
+scala> if ((b > a) && (b < (a * b))) b else a
+res5: Int = 4
+
+scala> if (a == 4) 6 else if (b == 4) (6 + 7 + a) else 25
+res6: Int = 16
