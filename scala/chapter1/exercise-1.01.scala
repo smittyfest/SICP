@@ -37,3 +37,5 @@ res9: Int = 6
 
 scala> (if (a > b) a else if (a < b) b else -1) * (a + 1)
 res10: Int = 16
+
+scala> sys.exit()
