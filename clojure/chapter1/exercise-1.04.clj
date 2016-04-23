@@ -1,3 +1,9 @@
+;; ==============================================================================
+;;
+;; @@@@@@@@@@@@@@@@
+;; @ Exercise 1.4 @
+;; @@@@@@@@@@@@@@@@
+;;
 (ns sicp.ch01 (:use clojure.test))
 
 ;; this procedure should add the absolute value of b to a
