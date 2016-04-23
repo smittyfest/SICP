@@ -1,5 +1,8 @@
+;; ==============================================================================
 ;;
-;; Exercise 1.7
+;; @@@@@@@@@@@@@@@@
+;; @ Exercise 1.7 @
+;; @@@@@@@@@@@@@@@@
 ;;
 ;; The good-enough? test used in computing square roots will not be very
 ;; effective for finding the square roots of very small numbers. Also,
