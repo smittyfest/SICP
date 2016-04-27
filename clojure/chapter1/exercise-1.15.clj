@@ -21,6 +21,7 @@
 
 (sine 12.15)
 
+;; unit-tests
 (deftest test-sine-num-iterations
   (is (= 5 @num-iterations)))
 
