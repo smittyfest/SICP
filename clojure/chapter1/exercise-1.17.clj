@@ -22,6 +22,7 @@
       :else (+ b (mult2 b (- m 1)))))
     (mult2 a n))
 
+;; unit-tests
 (deftest test-mult
   (is (=  0 (mult 2 0)))
   (is (=  2 (mult 2 1)))
