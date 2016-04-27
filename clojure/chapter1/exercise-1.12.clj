@@ -39,9 +39,8 @@
     :else (+
       (pascal (- row 1) (- col 1))
       (pascal (- row 1) col))))
-;;
+
 ;; unit tests.
-;;
 (= (pascal 1 1) 1)
 (= (pascal 2 1) 1)
 (= (pascal 2 2) 1)
