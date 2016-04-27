@@ -28,6 +28,7 @@
       :else (f (+ i 1) b c (+ a b c))))
     (f 3 0 1 2))
 
+;; unit-tests
 (deftest test-fib3
   (is (=  0 (fib3 0)))
   (is (=  1 (fib3 1)))
