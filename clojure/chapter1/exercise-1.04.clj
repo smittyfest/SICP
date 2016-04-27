@@ -11,6 +11,7 @@
   [a b]
   ((if (> b 0) + -) a b))
 
+;; unit-tests
 (deftest test-a-plus-abs-b
   (is (= 9 (a-plus-abs-b 4,  5)))
   (is (= 9 (a-plus-abs-b 4, -5)))
