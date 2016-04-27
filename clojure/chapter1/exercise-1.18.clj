@@ -21,6 +21,7 @@
       :else (mult2 (dv a 2) b accu (+ cnt 1)))
     (mult2 a b 0 0)))
 
+;; unit-tests
 (deftest test-mult
   (is (=  0 (mult 2 0)))
   (is (=  2 (mult 2 1)))
