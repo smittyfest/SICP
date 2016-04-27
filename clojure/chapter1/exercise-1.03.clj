@@ -26,6 +26,7 @@
     (+ (* a a) (if (> b c) (* b b) (* c c)))
     (+ (* b b) (if (> a c) (* a a) (* c c)))))
 
+;; unit-tests
 (deftest test-f
   (is (= 2 (f 1 1 1)))
   (is (= 5 (f 2 1 1)))
