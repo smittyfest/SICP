@@ -9,6 +9,5 @@
       (even? counter) (fast-iter (square b) (/ counter 2) accu)
       :else (fast-iter b (- counter 1) (* accu b))))
     (fast-iter b n 1))
-;;
+
 ;; unit-tests
-;;
