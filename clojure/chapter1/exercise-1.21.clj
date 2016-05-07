@@ -18,7 +18,9 @@
     (divides? test-divisor n) test-divisor
     :else (find-divisor n  (+ test-divisor 1))))
 
-(defn smallest-divisor [n] (find-divisor n 2))
+(defn smallest-divisor
+  [n]
+  (find-divisor n 2))
 
 (defn prime? [n] (= (smallest-divisor n) n))
 
