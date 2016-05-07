@@ -22,8 +22,11 @@
   [n]
   (find-divisor n 2))
 
-(defn prime? [n] (= (smallest-divisor n) n))
+(defn prime?
+  [n]
+  (= (smallest-divisor n) n))
 
+;; unit-tests
 (deftest test-prime
   (is (= true  (prime? 199)))
   (is (= true  (prime? 1999)))  
